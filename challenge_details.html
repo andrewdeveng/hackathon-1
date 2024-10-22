@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: gilroy, sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        #main {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #page1 {
+            position: relative;
+            height: auto;
+            width: 100vw;
+            background-color: #f1f1f1;
+            padding: 50px 20px;
+        }
+
+        #page1 h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #page1 p {
+            text-align: center;
+            color: #7c7c7c;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .challenge-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .challenge-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: transform 0.2s;
+        }
+
+        .challenge-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .challenge-item h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .challenge-item p {
+            color: #7c7c7c;
+            margin-bottom: 10px;
+        }
+
+        .challenge-item button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .challenge-item button:hover {
+            background-color: #444;
+        }
+
+        #nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 7%;
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            padding: 0px 30px;
+        }
+
+        #nav h3 {
+            font-family: gilroy;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        #nav button {
+            padding: 10px;
+            margin-right: 80px;
+            border-radius: 50px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="nav">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h3><b>CODE</b> CHALLENGES*</h3>
+        </a>
+    </div>
+
+    <div id="main">
+        <div id="page1" data-scroll>
+            <h1>Challenge Details</h1>
+
+            <div class="challenge-section">
+                <h2>Web Dev Challenge Hackathon 5: The Local Food Scene</h2>
+                <p>Build an app to help out your local food scene in any way you can. Apps due Sep 30.</p>
+                <p><b>Date Created:</b> 2024-09-26</p>
+                <p><b>Difficulty:</b> Medium</p>
+
+                <div class="challenge-item">
+                    <h3>Prompt</h3>
+                    <p>Make something that gets people excited about their local food scene.</p>
+                    <p>The way restaurants run changed in a big way during the pandemic. The big food delivery apps control which restaurants get seen, and social media algorithm changes make it harder than ever for these businesses to get noticed. Your challenge is to come up with some way of getting more people to notice — and get involved in — their local food scene.
+
+                        This can be anything web-based, whether you want to create some way for people to discover new restaurants and chefs, create an event or a social game, or even tackle the notoriously awful restaurant website design aesthetic.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>The rules and how to Submit</h3>
+                    <p>Steps to follow:</p>
+                    <ul>
+                        <li>Build a web app that meets the challenge</li>
+                        <li>Spend 30 minutes planning your app</li>
+                        <li>Spend 4 hours building your app</li>
+                        <li>Use Convex, Clerk, and/or Raycast to build your web app</li>
+                        <li>Publish the source code as a public GitHub repo</li>
+                        <li>Publish the web app to a public URL</li>
+                        <li>Submit your web app by 11:59 pm Pacific on Monday, September 30, 2024</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Rules</h3>
+                    <p>Apps must use Convex, Clerk, and/or Raycast as part of the build.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#main'),
+            smooth: true
+        });
+
+        // Initialize GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // GSAP animations on scroll
+        gsap.from("#page1 h1", {
+            scrollTrigger: {
+                trigger: "#page1 h1",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+
+        gsap.from(".challenge-section", {
+            scrollTrigger: {
+                trigger: ".challenge-section",
+                start: "top 85%",
+                toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2
+        });
+    </script>
+
+</body>
+
+</html>

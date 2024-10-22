@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <style>
+        #page1 {
+    position: relative;
+    height: auto; /* Allow height to adjust based on content */
+    width: 100vw;
+    background-color: #f1f1f1; /* Background color */
+    padding: 50px 20px; /* Padding for spacing */
+}
+
+#page1 h1 {
+    font-size: 36px; /* Main heading size */
+    color: #333; /* Main heading color */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#page1 p {
+    text-align: center; /* Centered paragraph */
+    color: #7c7c7c; /* Paragraph color */
+    font-weight: 400; /* Regular font weight */
+    margin-bottom: 30px; /* Space below paragraph */
+}
+
+#ongoing-challenges,
+#upcoming-challenges,
+#rules-guidelines,
+#community-feedback {
+    margin: 20px 0; /* Margin between sections */
+    padding: 20px; /* Padding for sections */
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+#ongoing-challenges h2,
+#upcoming-challenges h2,
+#rules-guidelines h2,
+#community-feedback h2 {
+    font-size: 28px; /* Subheading size */
+    color: #333; /* Subheading color */
+    margin-bottom: 10px; /* Space below subheadings */
+    text-align: left; /* Left align subheadings */
+}
+
+.challenge-item {
+    margin-bottom: 15px; /* Space between challenge items */
+    padding: 15px; /* Padding for each challenge item */
+    border-radius: 8px; /* Rounded corners for challenge items */
+    background-color: #f9f9f9; /* Light background for challenge items */
+    transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.challenge-item:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.challenge-item h3 {
+    font-size: 24px; /* Title font size */
+    color: #333; /* Title color */
+}
+
+.challenge-item p {
+    color: #7c7c7c; /* Description color */
+    margin-bottom: 10px; /* Space below description */
+}
+
+.challenge-item button {
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: #000; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.challenge-item button:hover {
+    background-color: #444; /* Darken button on hover */
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 30px;
+}
+#nav>h3{
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 22px;
+}
+#nav>button{
+    padding: 10px;
+    margin-right: 80px;
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h3>
+                <b>CODE</b> CHALLENGES*
+            </h3>
+        </a>
+        
+        
+    </div>
+    <div id="main">
+       
+        <div id="page1">
+            <h1>Challenges</h1>
+            <p>Welcome to the challenges! Here you can participate and showcase your skills.</p>
+            
+            <!-- Section for ongoing challenges -->
+            <section id="ongoing-challenges">
+                <h2>Ongoing Challenges</h2>
+                <div class="challenge-list">
+                    <div class="challenge-item">
+                        <h3>Challenge 1: Code Quest</h3>
+                        <p>Complete a series of coding tasks within a limited time frame. Show your coding skills!</p>
+                        <button onclick="location.href='challenge_details.html'">Join Challenge</button>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Challenge 2: Algorithm Showdown</h3>
+                        <p>Compete against others to solve complex algorithm challenges. Can you top the leaderboard?</p>
+                        <button onclick="location.href='challenge2.html'">Join Challenge</button>
+                    </div>
+                    <!-- Add more challenges as needed -->
+                </div>
+            </section>
+        
+            <!-- Section for upcoming challenges -->
+            <section id="upcoming-challenges">
+                <h2>Upcoming Challenges</h2>
+                <p>Stay tuned for our next exciting challenges! More details coming soon.</p>
+            </section>
+        
+            <!-- Section for challenge rules and guidelines -->
+            <section id="rules-guidelines">
+                <h2>Challenge Rules & Guidelines</h2>
+                <ul>
+                    <li>All participants must register to join challenges.</li>
+                    <li>Challenges are open to all skill levels.</li>
+                    <li>Collaboration and sharing knowledge are encouraged.</li>
+                    <li>Respect other participants and keep the environment friendly.</li>
+                </ul>
+            </section>
+        
+            <!-- Section for community feedback or testimonials -->
+            <section id="community-feedback">
+                <h2>Community Feedback</h2>
+                <p>Hear what our participants have to say about their experience:</p>
+                <blockquote>
+                    <p>"I loved the coding challenges! It really helped me improve my skills."</p>
+                    <cite>- Happy Coder</cite>
+                </blockquote>
+                <!-- Add more testimonials as needed -->
+            </section>
+        </div>
+        
+       
+
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
